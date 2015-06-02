@@ -15,19 +15,16 @@ namespace StockScrape.NET
         public Nasdaq()
         {
             stocks = new Dictionary<string, Stock>();
-
-            GetStocks();
-            WriteStockFile();
         }
 
-        public void GetStocks()
+        public void LoadStocks()
         {
             var contents = File.ReadAllText("symbols.json");
             var result = JsonConvert.DeserializeObject<List<Stock>>(contents);
             result.ForEach(x => stocks.Add(x.Symbol, x));
         }
 
-        public void WriteStockFile()
+        public void WriteStocks()
         {
             using (var writer = new StreamWriter("scraped.csv", false))
             {

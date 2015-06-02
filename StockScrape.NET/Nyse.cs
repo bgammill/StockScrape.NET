@@ -15,12 +15,12 @@ namespace StockScrape.NET
             stocks = new Dictionary<string, Stock>();
         }
 
-        public void GetStocks()
+        public void LoadStocks()
         {
 
         }
 
-        public void WriteStockFile()
+        public void WriteStocks()
         {
 
         }

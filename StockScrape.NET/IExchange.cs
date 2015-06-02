@@ -8,8 +8,8 @@ namespace StockScrape.NET
 {
     public interface IExchange
     {
-        void GetStocks();
+        void LoadStocks();
 
-        void WriteStockFile();
+        void WriteStocks();
     }
 }

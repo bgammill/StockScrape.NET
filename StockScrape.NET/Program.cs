@@ -14,13 +14,28 @@ namespace StockScrape.NET
 
         static void Main(string[] args)
         {
+            Initialize();
+            LoadStocks();
+            WriteStocks();
+        }
+
+        public static void Initialize()
+        {
             exchanges = new List<IExchange>()
             {
                 new Nasdaq(),
                 new Nyse()
             };
+        }
 
-            Console.ReadLine();
+        public static void LoadStocks()
+        {
+            exchanges.ForEach(x => x.LoadStocks());
+        }
+
+        public static void WriteStocks()
+        {
+            exchanges.ForEach(x => x.WriteStocks());
         }
     }
 }
