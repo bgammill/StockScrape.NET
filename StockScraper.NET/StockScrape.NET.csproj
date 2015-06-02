@@ -7,7 +7,7 @@
     <ProjectGuid>{70F89EFF-30B4-45EF-8840-95A37D02ABCC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StockScraper.NET</RootNamespace>
+    <RootNamespace>StockScrape.NET</RootNamespace>
     <AssemblyName>StockScraper.NET</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
