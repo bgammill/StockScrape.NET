@@ -15,6 +15,9 @@ namespace StockScrape.NET
         public Nasdaq()
         {
             stocks = new Dictionary<string, Stock>();
+
+            GetStocks();
+            WriteStockFile();
         }
 
         public void GetStocks()
@@ -26,7 +29,15 @@ namespace StockScrape.NET
 
         public void WriteStockFile()
         {
-            throw new NotImplementedException();
+            using (var writer = new StreamWriter("scraped.csv", false))
+            {
+                foreach (var key in stocks.Keys)
+                {
+                    var output = string.Format("{0},{1}", key, stocks[key].LastSale);
+                    writer.WriteLine(output);
+                }
+                writer.Close();
+            }
         }
     }
 }

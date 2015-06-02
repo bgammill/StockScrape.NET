@@ -20,7 +20,7 @@ namespace StockScrape.NET
                 new Nyse()
             };
 
-            exchanges.ForEach(x => x.GetStocks());
+            Console.ReadLine();
         }
     }
 }
