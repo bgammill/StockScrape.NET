@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StockScrape.NET</RootNamespace>
-    <AssemblyName>StockScraper.NET</AssemblyName>
+    <AssemblyName>StockScrape.NET</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
