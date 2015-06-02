@@ -10,10 +10,17 @@ namespace StockScraper.NET
 {
     class Program
     {
-        List<IExchange> exchanges = new List<IExchange>();
+        static List<IExchange> exchanges;
 
         static void Main(string[] args)
         {
+            exchanges = new List<IExchange>()
+            {
+                new Nasdaq(),
+                new Nyse()
+            };
+
+            exchanges.ForEach(x => x.GetStocks());
         }
     }
 }

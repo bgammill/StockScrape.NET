@@ -8,9 +8,16 @@ namespace StockScraper.NET
 {
     class Nyse : IExchange
     {
-        public List<Stock> GetStocks()
+        Dictionary<string, Stock> stocks;
+
+        public Nyse()
         {
-            return new List<Stock>();
+            stocks = new Dictionary<string, Stock>();
+        }
+
+        public void GetStocks()
+        {
+
         }
 
         public void WriteStockFile()

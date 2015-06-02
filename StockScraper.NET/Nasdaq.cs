@@ -10,15 +10,18 @@ namespace StockScraper.NET
 {
     class Nasdaq : IExchange
     {
+        Dictionary<string, Stock> stocks;
+
         public Nasdaq()
         {
-
+            stocks = new Dictionary<string, Stock>();
         }
 
-        public List<Stock> GetStocks()
+        public void GetStocks()
         {
             var contents = File.ReadAllText("symbols.json");
-            return JsonConvert.DeserializeObject<List<Stock>>(contents);
+            var result = JsonConvert.DeserializeObject<List<Stock>>(contents);
+            result.ForEach(x => stocks.Add(x.Symbol, x));
         }
 
         public void WriteStockFile()

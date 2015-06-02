@@ -8,7 +8,7 @@ namespace StockScraper.NET
 {
     public interface IExchange
     {
-        List<Stock> GetStocks();
+        void GetStocks();
 
         void WriteStockFile();
     }
